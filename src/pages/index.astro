@@ -1,9 +1,10 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import FooterLayout from "../layouts/FooterLayout.astro";
 ---
 
 <BaseLayout>
-	<!-- <div class="relative overflow-hidden">
+  <!-- <div class="relative overflow-hidden">
 		<div
 			class="relative z-30 max-w-3xl mx-auto h-screen flex flex-col space-y-12 items-center p-8"
 		>
@@ -72,75 +73,76 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 			 Your browser does not support the video tag.
 		</video>
 	</div> -->
-	<header
-		class="relative flex items-center justify-center h-screen mb-12 overflow-hidden"
-	>
-		<div
-			class="relative z-30 max-w-3xl mx-auto h-screen flex flex-col space-y-12 items-center p-8"
-		>
-			<div class="flex flex-row space-x-8">
-				<img
-					class="h-16 object-cover"
-					src="https://wridev.id/_astro/wri-light-512.c55da9f6.png"
-					alt=""
-					srcset=""
-				/>
-				<img
-					class="h-16 object-cover"
-					src="https://hacktoberfest.com/_next/static/media/logo-hacktoberfest--logomark.b91c17d2.svg"
-					alt=""
-					srcset=""
-				/>
-			</div>
-			<p class="text-xl font-bold">JUNE 14 - 18, 2024 IN AMSTERDAM</p>
-			<p class="text-center text-4xl font-bold">
-				Artificial Intelligence & Cloud Innovation: Breaking the Limits
-				of Creativity Towards a Smart Adaptive Future
-			</p>
-			<div class="grid grid-cols-12 gap-4">
-				<div class="col-span-3">
-					<p class="text-2xl font-semibold">60+</p>
-					<p class="text-sm">Speakers sharing latest insights</p>
-				</div>
-				<div class="col-span-3">
-					<p class="text-2xl font-semibold">10K+</p>
-					<p class="text-sm">Devs from all over the globe</p>
-				</div>
-				<div class="col-span-3">
-					<p class="text-2xl font-semibold">1500</p>
-					<p class="text-sm">Speakers sharing latest insights</p>
-				</div>
-				<div class="col-span-3">
-					<p class="text-2xl font-semibold">60+</p>
-					<p class="text-sm">Speakers sharing latest insights</p>
-				</div>
-			</div>
-			<div class="flex flex-row space-x-4">
-				<button
-					type="button"
-					class="text-white bg-amber-600 font-medium rounded-md text-sm px-8 py-3 capitalize"
-				>
-					reserve a spot
-				</button>
-				<button
-					type="button"
-					class="px-8 py-3 text-sm font-medium focus:outline-none bg-transparent rounded-md border border-white capitalize"
-				>
-					contact us
-				</button>
-			</div>
-		</div>
-		<video
-			autoplay
-			loop
-			muted
-			class="absolute z-10 w-auto min-w-full min-h-full max-w-none"
-		>
-			<source
-				src="https://reactsummit.com/video/hero.mp4?v4"
-				type="video/mp4"
-			/>
-			 Your browser does not support the video tag.
-		</video>
-	</header>
+  <header
+    class="relative flex items-center justify-center h-screen mb-12 overflow-hidden"
+  >
+    <div
+      class="relative z-30 max-w-3xl mx-auto h-screen flex flex-col space-y-12 items-center p-8"
+    >
+      <div class="flex flex-row space-x-8">
+        <img
+          class="h-10 md:h-16 object-cover"
+          src="https://wridev.id/_astro/wri-light-512.c55da9f6.png"
+          alt=""
+          srcset=""
+        />
+        <img
+          class="h-10 md:16 object-cover"
+          src="https://hacktoberfest.com/_next/static/media/logo-hacktoberfest--logomark.b91c17d2.svg"
+          alt=""
+          srcset=""
+        />
+      </div>
+      <p class="text-xl font-bold">JUNE 14 - 18, 2024 IN AMSTERDAM</p>
+      <p class="text-center text-md font-bold md:text-3xl">
+        Artificial Intelligence & Cloud Innovation: Breaking the Limits of
+        Creativity Towards a Smart Adaptive Future
+      </p>
+      <div class="grid grid-cols-12 gap-4">
+        <div class="col-span-3">
+          <p class="text-2xl font-semibold">60+</p>
+          <p class="text-sm">Speakers sharing latest insights</p>
+        </div>
+        <div class="col-span-3">
+          <p class="text-2xl font-semibold">10K+</p>
+          <p class="text-sm">Devs from all over the globe</p>
+        </div>
+        <div class="col-span-3">
+          <p class="text-2xl font-semibold">1500</p>
+          <p class="text-sm">Speakers sharing latest insights</p>
+        </div>
+        <div class="col-span-3">
+          <p class="text-2xl font-semibold">60+</p>
+          <p class="text-sm">Speakers sharing latest insights</p>
+        </div>
+      </div>
+      <div class="flex flex-row space-x-4">
+        <button
+          type="button"
+          class="text-white bg-amber-600 font-medium rounded-md text-xs md:text-sm px-4 py-3 md:px-8 md:py-3 capitalize"
+        >
+          reserve a spot
+        </button>
+        <button
+          type="button"
+          class="px-4 py-3 md:px-8 md:py-3 md:text-sm text-xs font-medium focus:outline-none bg-transparent rounded-md border border-white capitalize"
+        >
+          contact us
+        </button>
+      </div>
+    </div>
+    <video
+      autoplay
+      loop
+      muted
+      class="absolute z-10 w-auto min-w-full min-h-full max-w-none"
+    >
+      <source
+        src="https://reactsummit.com/video/hero.mp4?v4"
+        type="video/mp4"
+      />
+       Your browser does not support the video tag.
+    </video>
+  </header>
+  <FooterLayout />
 </BaseLayout>
