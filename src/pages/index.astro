@@ -1,83 +1,16 @@
 ---
+import { benefits } from "../data/benefit.json";
+import { partners } from "../data/partner.json";
+import { speakers } from "../data/speaker.json";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import FooterLayout from "../layouts/FooterLayout.astro";
 ---
 
 <BaseLayout>
-  <!-- <div class="relative overflow-hidden">
-		<div
-			class="relative z-30 max-w-3xl mx-auto h-screen flex flex-col space-y-12 items-center p-8"
-		>
-			<div class="flex flex-row space-x-8">
-				<img
-					class="h-16 object-cover"
-					src="https://wridev.id/_astro/wri-light-512.c55da9f6.png"
-					alt=""
-					srcset=""
-				/>
-				<img
-					class="h-16 object-cover"
-					src="https://hacktoberfest.com/_next/static/media/logo-hacktoberfest--logomark.b91c17d2.svg"
-					alt=""
-					srcset=""
-				/>
-			</div>
-			<p class="text-xl font-medium">JUNE 14 - 18, 2024 IN AMSTERDAM</p>
-			<p class="text-center text-3xl font-semibold">
-				Artificial Intelligence & Cloud Innovation: Breaking the Limits
-				of Creativity Towards a Smart Adaptive Future
-			</p>
-			<div class="grid grid-cols-12 gap-4">
-				<div class="col-span-3">
-					<p class="text-2xl font-semibold">60+</p>
-					<p class="text-sm">Speakers sharing latest insights</p>
-				</div>
-				<div class="col-span-3">
-					<p class="text-2xl font-semibold">10K+</p>
-					<p class="text-sm">Devs from all over the globe</p>
-				</div>
-				<div class="col-span-3">
-					<p class="text-2xl font-semibold">1500</p>
-					<p class="text-sm">Speakers sharing latest insights</p>
-				</div>
-				<div class="col-span-3">
-					<p class="text-2xl font-semibold">60+</p>
-					<p class="text-sm">Speakers sharing latest insights</p>
-				</div>
-			</div>
-			<div class="flex flex-row space-x-4">
-				<button
-					type="button"
-					class="text-white bg-amber-600 font-medium rounded-md text-sm px-8 py-3 capitalize"
-				>
-					reserve a spot
-				</button>
-				<button
-					type="button"
-					class="px-8 py-3 text-sm font-medium focus:outline-none bg-transparent rounded-md border border-white capitalize"
-				>
-					contact us
-				</button>
-			</div>
-		</div>
-		<video
-			autoplay
-			loop
-			muted
-			class="absolute z-10 w-auto min-w-full min-h-full max-w-none"
-		>
-			<source
-				src="https://reactsummit.com/video/hero.mp4?v4"
-				type="video/mp4"
-			/>
-			 Your browser does not support the video tag.
-		</video>
-	</div> -->
   <header
     class="relative flex items-center justify-center h-screen mb-12 overflow-hidden"
   >
     <div
-      class="relative z-30 max-w-3xl mx-auto h-screen flex flex-col space-y-12 items-center p-8"
+      class="relative z-30 max-w-4xl mx-auto h-screen flex flex-col space-y-12 items-center p-8"
     >
       <div class="flex flex-row space-x-8">
         <img
@@ -87,7 +20,7 @@ import FooterLayout from "../layouts/FooterLayout.astro";
           srcset=""
         />
         <img
-          class="h-10 md:16 object-cover"
+          class="h-10 md:h-16 object-cover"
           src="https://hacktoberfest.com/_next/static/media/logo-hacktoberfest--logomark.b91c17d2.svg"
           alt=""
           srcset=""
@@ -131,6 +64,10 @@ import FooterLayout from "../layouts/FooterLayout.astro";
         </button>
       </div>
     </div>
+    <div
+      class="absolute z-20 w-auto min-w-full min-h-full max-w-none bg-gray-900 opacity-50"
+    >
+    </div>
     <video
       autoplay
       loop
@@ -144,5 +81,146 @@ import FooterLayout from "../layouts/FooterLayout.astro";
        Your browser does not support the video tag.
     </video>
   </header>
-  <FooterLayout />
+  <div class="max-w-4xl mx-auto flex flex-col items-center space-y-8 mt-16">
+    <p class="text-2xl font-semibold">TENTANG SEMINAR</p>
+    <p class="text-center">
+      Seminar Nasional merupakan salah satu program kerja Himpunan Mahasiswa
+      Teknologi Informasi yang bertujuan sebagai media untuk menyampaikan
+      informasi atau gagasan baru yang bersifat ilmiah kepada khalayak. Hasil
+      dari kegiatan ini adalah informasi dan ilmu yang nantinya dapat bermanfaat
+      kedepannya.
+    </p>
+    <p>This year, you can expect authors and core teams of:</p>
+    <div class="w-full grid grid-cols-12 gap-8 justify-center">
+      {
+        benefits.map((e) => {
+          return (
+            <div class="col-span-3 flex flex-col items-center justify-center">
+              <div class="h-16 w-16 bg-amber-600 flex items-center justify-center mb-2 rounded-md">
+                <i class="bx bx-universal-access text-5xl text-center" />
+              </div>
+              <p class="text-sm">{e.name}</p>
+            </div>
+          );
+        })
+      }
+    </div>
+  </div>
+  <div class="max-w-4xl mx-auto grid grid-cols-12 gap-8 mt-16">
+    <div
+      class="col-span-4 p-4 border border-white flex flex-col items-center space-y-4 text-center"
+    >
+      <p class="text-2xl font-semibold">Pendaftaran Kompetisi PKM</p>
+      <p class="text-lg font-semibold">26 AUGUST - 16 OCTOBER</p>
+
+      <p class="text-sm">
+        Pick up your badge and hangout with community in the best local craft
+        beer place!
+      </p>
+    </div>
+    <div
+      class="col-span-4 p-4 border border-white flex flex-col items-center space-y-4 text-center"
+    >
+      <p class="text-2xl font-semibold">Registrasi Semnas Dan Expo</p>
+      <p class="text-lg font-semibold">18 - 28 OCTOBER</p>
+      <p class="text-sm">
+        Pick up your badge and hangout with community in the best local craft
+        beer place!
+      </p>
+    </div>
+    <div
+      class="col-span-4 p-4 border border-white flex flex-col items-center space-y-4 text-center"
+    >
+      <p class="text-2xl font-semibold">Pengumuman Finalis PKM</p>
+      <p class="text-lg font-semibold">23 OCTOBER</p>
+      <p class="text-sm">
+        Pick up your badge and hangout with community in the best local craft
+        beer place!
+      </p>
+    </div>
+    <div
+      class="col-span-6 p-4 border border-white flex flex-col items-center space-y-4 text-center"
+    >
+      <p class="text-2xl font-semibold">Presentasi Final PKM</p>
+      <p class="text-lg font-semibold">23 OCTOBER</p>
+      <p class="text-sm">
+        Pick up your badge and hangout with community in the best local craft
+        beer place!
+      </p>
+    </div>
+    <div
+      class="col-span-6 p-4 border border-white flex flex-col items-center space-y-4 text-center"
+    >
+      <p class="text-2xl font-semibold">Seminar Nasional</p>
+      <p class="text-lg font-semibold">23 OCTOBER</p>
+      <p class="text-sm">
+        Pick up your badge and hangout with community in the best local craft
+        beer place!
+      </p>
+    </div>
+    <div class="col-span-12 text-center">
+      <span
+        >Want to know the rest? <a href="" class="text-amber-600">Follow us</a>
+      </span>
+    </div>
+  </div>
+  <div class="max-w-4xl mx-auto mt-16">
+    <p class="text-center text-2xl font-semibold">Our Speakers</p>
+    <div class="grid grid-cols-12 gap-8 mt-8">
+      {
+        speakers.map((e) => {
+          return (
+            <div class="col-span-3 flex flex-col space-y-2">
+              <img class="w-full rounded-md" src={e.thumbail} alt="" />
+              <p>{e.name}</p>
+              <p class="text-sm">{e.job}</p>
+              <p class="text-xs">{e.description}</p>
+            </div>
+          );
+        })
+      }
+    </div>
+  </div>
+  <div class="max-w-4xl mx-auto mt-16">
+    <p class="text-center text-2xl font-semibold">Sponsors</p>
+    <div class="grid grid-cols-12 gap-8 mt-8 justify-center">
+      <div class="col-span-4">
+        <img src="metro.png" class="h-24" alt="" />
+      </div>
+      <div class="col-span-3">
+        <img
+          src="https://lh5.googleusercontent.com/p/AF1QipPrQM70cDCmKJ9iuwmyG1iG9LXAImVUBUsXvheS"
+          class="h-24"
+          alt=""
+        />
+      </div>
+      <div class="col-span-3">
+        <img
+          src="https://xlfutureleaders.com/wp-content/uploads/2021/04/logo-xlfl.png"
+          class="h-24"
+          alt=""
+        />
+      </div>
+    </div>
+  </div>
+  <div class="max-w-4xl mx-auto mt-16">
+    <p class="text-center text-2xl font-semibold">Media Partner</p>
+    <div class="grid grid-cols-12 gap-8 mt-8 justify-center">
+      {
+        partners.map((e) => {
+          return (
+            <div class="col-span-3 flex flex-col items-center">
+              <div class="p-2 bg-white rounded-md">
+                <img
+                  src={e.thumbnail}
+                  class="h-16 object-fill rounded-sm"
+                  alt={e.name}
+                />
+              </div>
+            </div>
+          );
+        })
+      }
+    </div>
+  </div>
 </BaseLayout>

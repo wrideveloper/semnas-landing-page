@@ -1,10 +1,10 @@
-export interface Template {
+export interface SocialMedia {
   title: string,
   link: string,
   type: string,
 }
 
-export const contact: Template[] = [
+export const contact: SocialMedia[] = [
   {
     title: 'Instagram',
     link: 'https://instagram.com/wri_polinema/',
