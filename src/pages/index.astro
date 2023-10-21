@@ -81,7 +81,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
        Your browser does not support the video tag.
     </video>
   </header>
-  <div class="max-w-4xl mx-auto flex flex-col items-center space-y-8 mt-16">
+  <div
+    class="max-w-xs md:max-w-4xl mx-auto flex flex-col items-center space-y-8 mt-16"
+  >
     <p class="text-2xl font-semibold">TENTANG SEMINAR</p>
     <p class="text-center">
       Seminar Nasional merupakan salah satu program kerja Himpunan Mahasiswa
@@ -99,82 +101,87 @@ import BaseLayout from "../layouts/BaseLayout.astro";
               <div class="h-16 w-16 bg-amber-600 flex items-center justify-center mb-2 rounded-md">
                 <i class="bx bx-universal-access text-5xl text-center" />
               </div>
-              <p class="text-sm">{e.name}</p>
+              <p class="text-xs max-w-sm">{e.name}</p>
             </div>
           );
         })
       }
     </div>
   </div>
-  <div class="max-w-4xl mx-auto grid grid-cols-12 gap-8 mt-16">
+  <div class="mx-auto max-w-4xl justify-center items-center gap-6 mt-16 p-8">
     <div
-      class="col-span-4 p-4 border border-white flex flex-col items-center space-y-4 text-center"
+      class="max-w-7xl mx-auto md:grid md:grid-cols-12 flex flex-col gap-3 md:gap-8 mb-8"
     >
-      <p class="text-2xl font-semibold">Pendaftaran Kompetisi PKM</p>
-      <p class="text-lg font-semibold">26 AUGUST - 16 OCTOBER</p>
+      <div
+        class="col-span-4 p-4 border border-white flex flex-col items-center space-y-4 text-center"
+      >
+        <p class="text-2xl font-semibold">Pendaftaran Kompetisi PKM</p>
+        <p class="text-lg font-semibold">26 AUGUST - 16 OCTOBER</p>
 
-      <p class="text-sm">
-        Pick up your badge and hangout with community in the best local craft
-        beer place!
-      </p>
-    </div>
-    <div
-      class="col-span-4 p-4 border border-white flex flex-col items-center space-y-4 text-center"
-    >
-      <p class="text-2xl font-semibold">Registrasi Semnas Dan Expo</p>
-      <p class="text-lg font-semibold">18 - 28 OCTOBER</p>
-      <p class="text-sm">
-        Pick up your badge and hangout with community in the best local craft
-        beer place!
-      </p>
-    </div>
-    <div
-      class="col-span-4 p-4 border border-white flex flex-col items-center space-y-4 text-center"
-    >
-      <p class="text-2xl font-semibold">Pengumuman Finalis PKM</p>
-      <p class="text-lg font-semibold">23 OCTOBER</p>
-      <p class="text-sm">
-        Pick up your badge and hangout with community in the best local craft
-        beer place!
-      </p>
-    </div>
-    <div
-      class="col-span-6 p-4 border border-white flex flex-col items-center space-y-4 text-center"
-    >
-      <p class="text-2xl font-semibold">Presentasi Final PKM</p>
-      <p class="text-lg font-semibold">23 OCTOBER</p>
-      <p class="text-sm">
-        Pick up your badge and hangout with community in the best local craft
-        beer place!
-      </p>
-    </div>
-    <div
-      class="col-span-6 p-4 border border-white flex flex-col items-center space-y-4 text-center"
-    >
-      <p class="text-2xl font-semibold">Seminar Nasional</p>
-      <p class="text-lg font-semibold">23 OCTOBER</p>
-      <p class="text-sm">
-        Pick up your badge and hangout with community in the best local craft
-        beer place!
-      </p>
-    </div>
-    <div class="col-span-12 text-center">
-      <span
-        >Want to know the rest? <a href="" class="text-amber-600">Follow us</a>
-      </span>
+        <p class="text-sm">
+          Pick up your badge and hangout with community in the best local craft
+          beer place!
+        </p>
+      </div>
+      <div
+        class="col-span-4 p-4 border border-white flex flex-col items-center space-y-4 text-center"
+      >
+        <p class="text-2xl font-semibold">Registrasi Semnas Dan Expo</p>
+        <p class="text-lg font-semibold">18 - 28 OCTOBER</p>
+        <p class="text-sm">
+          Pick up your badge and hangout with community in the best local craft
+          beer place!
+        </p>
+      </div>
+      <div
+        class="col-span-4 p-4 border border-white flex flex-col items-center space-y-4 text-center"
+      >
+        <p class="text-2xl font-semibold">Pengumuman Finalis PKM</p>
+        <p class="text-lg font-semibold">23 OCTOBER</p>
+        <p class="text-sm">
+          Pick up your badge and hangout with community in the best local craft
+          beer place!
+        </p>
+      </div>
+      <div
+        class="col-span-6 p-4 border border-white flex flex-col items-center space-y-4 text-center"
+      >
+        <p class="text-2xl font-semibold">Presentasi Final PKM</p>
+        <p class="text-lg font-semibold">23 OCTOBER</p>
+        <p class="text-sm">
+          Pick up your badge and hangout with community in the best local craft
+          beer place!
+        </p>
+      </div>
+      <div
+        class="col-span-6 p-4 border border-white flex flex-col items-center space-y-4 text-center"
+      >
+        <p class="text-2xl font-semibold">Seminar Nasional</p>
+        <p class="text-lg font-semibold">23 OCTOBER</p>
+        <p class="text-sm">
+          Pick up your badge and hangout with community in the best local craft
+          beer place!
+        </p>
+      </div>
+      <div class="col-span-12 text-center">
+        <span
+          >Want to know the rest? <a href="" class="text-amber-600">Follow us</a
+          >
+        </span>
+      </div>
     </div>
   </div>
   <div class="max-w-4xl mx-auto mt-16">
     <p class="text-center text-2xl font-semibold">Our Speakers</p>
-    <div class="grid grid-cols-12 gap-8 mt-8">
+    <div class="grid md:grid-cols-12 p-8 gap-10 mt-8">
       {
         speakers.map((e) => {
           return (
-            <div class="col-span-3 flex flex-col space-y-2">
-              <img class="w-full rounded-md" src={e.thumbail} alt="" />
-              <p>{e.name}</p>
-              <p class="text-sm">{e.job}</p>
-              <p class="text-xs">{e.description}</p>
+            <div class="col-span-3 flex flex-col space-y-2 ">
+              <img class="w-full rounded-xl" src={e.thumbail} alt="" />
+              <p class="text-lg md:text-xl">{e.name}</p>
+              <p class="text-sm md:text-base ">{e.job}</p>
+              <p class="text-xs md:text-sm">{e.description}</p>
             </div>
           );
         })
@@ -183,7 +190,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   </div>
   <div class="max-w-4xl mx-auto mt-16">
     <p class="text-center text-2xl font-semibold">Sponsors</p>
-    <div class="grid grid-cols-12 gap-8 mt-8 justify-center">
+    <div class="grid md:grid-cols-12 gap-8 mt-3 p-8 justify-center">
       <div class="col-span-4">
         <img src="metro.png" class="h-24" alt="" />
       </div>
@@ -205,7 +212,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   </div>
   <div class="max-w-4xl mx-auto mt-16">
     <p class="text-center text-2xl font-semibold">Media Partner</p>
-    <div class="grid grid-cols-12 gap-8 mt-8 justify-center">
+    <div class="grid md:grid-cols-12 grid-cols-9 p-8 gap-8 mt-4 justify-center">
       {
         partners.map((e) => {
           return (
